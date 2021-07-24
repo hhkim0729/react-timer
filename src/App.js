@@ -6,10 +6,12 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Route path="/" exact={true} component={Input} />
-      <Route path="/time" component={Time} />
-    </BrowserRouter>
+    <div className="app">
+      <BrowserRouter>
+        <Route path="/" exact={true} component={Input} />
+        <Route path="/time" component={Time} />
+      </BrowserRouter>
+    </div>
   );
 }
 

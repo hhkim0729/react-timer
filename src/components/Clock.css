@@ -1,0 +1,16 @@
+.clock {
+  display: flex;
+  flex-direction: column;
+}
+
+.clock h1 {
+  color: teal;
+  margin-bottom: 1vh;
+}
+
+.clock h3 {
+  margin-top: 0;
+  font-size: 3vh;
+  font-weight: normal;
+  color: #555;
+}

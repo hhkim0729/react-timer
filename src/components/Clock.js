@@ -1,19 +1,20 @@
 import React, { useState, useRef, useEffect } from 'react';
+import './Clock.css';
 
 const padNumber = (num, length) => {
   return String(num).padStart(length, '0');
 };
 
 const Clock = () => {
-  let now = new Date();
-  const [hour, setHour] = useState(padNumber(now.getHours(), 2));
-  const [min, setMin] = useState(padNumber(now.getMinutes(), 2));
-  const [sec, setSec] = useState(padNumber(now.getSeconds(), 2));
+  const date = new Date();
+  const [hour, setHour] = useState(padNumber(date.getHours(), 2));
+  const [min, setMin] = useState(padNumber(date.getMinutes(), 2));
+  const [sec, setSec] = useState(padNumber(date.getSeconds(), 2));
   const interval = useRef(null);
 
   useEffect(() => {
     interval.current = setInterval(() => {
-      now = new Date();
+      const now = new Date();
       setHour(padNumber(now.getHours(), 2));
       setMin(padNumber(now.getMinutes(), 2));
       setSec(padNumber(now.getSeconds(), 2));
@@ -22,8 +23,11 @@ const Clock = () => {
   }, []);
 
   return (
-    <div>
-      {hour} : {min} : {sec}
+    <div className="clock">
+      <h1>Now</h1>
+      <h3>
+        {hour} : {min} : {sec}
+      </h3>
     </div>
   );
 };

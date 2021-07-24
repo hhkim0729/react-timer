@@ -1,0 +1,10 @@
+.time {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.time h1 {
+  text-transform: uppercase;
+  font-size: 4vh;
+}

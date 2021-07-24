@@ -1,0 +1,26 @@
+.timer {
+  position: relative;
+}
+
+.timer img {
+  width: 40vh;
+  border-radius: 10px;
+}
+
+.timer h3 {
+  color: white;
+  position: absolute;
+  top: 1.5vh;
+  left: 13.5vh;
+  font-size: 3vh;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.timer h2 {
+  font-size: 5vh;
+  position: absolute;
+  top: 4.5vh;
+  left: 7.5vh;
+  color: rgb(255, 230, 0);
+}
