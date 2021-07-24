@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className="app">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Route path="/" exact={true} component={Input} />
         <Route path="/time" component={Time} />
       </BrowserRouter>
