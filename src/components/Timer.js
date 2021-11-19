@@ -21,7 +21,7 @@ const Timer = (props) => {
     interval.current = setInterval(() => {
       initialTime.current -= 1;
       setSec(padNumber(initialTime.current % 60, 2));
-      setMin(padNumber(parseInt(initialTime.current / 60), 2));
+      setMin(padNumber(parseInt((initialTime.current / 60) % 60), 2));
       setHour(padNumber(parseInt(initialTime.current / 60 / 60), 2));
     }, 1000);
     return () => clearInterval(interval.current);
